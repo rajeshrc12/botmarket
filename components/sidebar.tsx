@@ -23,7 +23,7 @@ const Sidebar = async () => {
   return (
     <div className="w-[250px] h-full flex flex-col justify-between border-r px-2">
       <div className="flex flex-col gap-10">
-        <div>Logo</div>
+        <div className="font-bold text-2xl p-2">BotMarket</div>
         <div className="flex flex-col gap-5">
           {navItems.map((item) => (
             <ActiveLink key={item.path} href={item.path} icon={item.icon} name={item.name} />
