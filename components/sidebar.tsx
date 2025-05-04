@@ -1,9 +1,9 @@
 import { auth } from "@/auth";
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
 import { ShoppingBag, User } from "lucide-react";
 import ActiveLink from "./active-link";
+import SignOut from "./sign-out";
 
 const Sidebar = async () => {
   const session = await auth();
@@ -33,7 +33,7 @@ const Sidebar = async () => {
       <div className="p-2">
         <div className="flex items-center ">
           <Image height={30} width={30} className="rounded-full" alt="log" src={session?.user?.image} />
-          <Button variant={"ghost"}>Logout</Button>
+          <SignOut />
         </div>
       </div>
     </div>
