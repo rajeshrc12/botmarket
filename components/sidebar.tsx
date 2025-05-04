@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import Image from "next/image";
 import React from "react";
-import { ShoppingBag, User } from "lucide-react";
+import { Bot, ShoppingBag, User } from "lucide-react";
 import ActiveLink from "./active-link";
 import SignOut from "./sign-out";
 
@@ -9,13 +9,18 @@ const Sidebar = async () => {
   const session = await auth();
   const navItems = [
     {
-      name: "Marketplace",
-      path: "/marketplace",
+      name: "Dashboard",
+      path: "/dashboard",
       icon: <ShoppingBag className="h-4 w-4" />,
     },
     {
+      name: "My bots",
+      path: "/dashboard/bot",
+      icon: <Bot className="h-4 w-4" />,
+    },
+    {
       name: "Credentials",
-      path: "/marketplace/credential",
+      path: "/dashboard/credential",
       icon: <User className="h-4 w-4" />,
     },
   ];

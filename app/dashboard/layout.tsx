@@ -1,7 +1,7 @@
 import Sidebar from "@/components/sidebar";
 import React from "react";
 
-const MarkeplaceLayout = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen">
       <Sidebar />
@@ -10,4 +10,4 @@ const MarkeplaceLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default MarkeplaceLayout;
+export default DashboardLayout;
